@@ -2,7 +2,7 @@ import React from 'react'
 
 const ListMonsters = ({ filteredData }) => {
    return (
-      <div>
+      <div className='list-monsters-container'>
          {
             filteredData.map((user) => {
                return (
