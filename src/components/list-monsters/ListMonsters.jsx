@@ -1,4 +1,5 @@
 import React from 'react'
+import './ListMonsters.css'
 
 const ListMonsters = ({ filteredData }) => {
    return (
