@@ -1,4 +1,5 @@
 import React from 'react'
+import './Search.css'
 
 const Search = ({ setFilteredData, data }) => {
 
@@ -13,7 +14,7 @@ const Search = ({ setFilteredData, data }) => {
    }
 
    return (
-      <input type="text" placeholder='Search monsters' onChange={(e) => searchFilter(e.target.value)} />
+      <input className='search-input' type="text" placeholder='Search monsters' onChange={(e) => searchFilter(e.target.value)} />
    )
 }
 
