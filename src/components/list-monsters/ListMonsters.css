@@ -2,7 +2,7 @@
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: center;
    margin-top: 30px;
 }
 
@@ -14,7 +14,7 @@
    width: 250px;
    height: 350px;
    border-radius: 10px;
-   margin: 10px;
+   margin: 8px;
 }
 
 .monster-container:hover {
