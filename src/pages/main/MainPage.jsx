@@ -18,6 +18,7 @@ const Main = () => {
 
    return (
       <div className='main-page-container'>
+         <h1 className='main-page-title'>Monsters rolodex</h1>
          <Search setFilteredData={setFilteredData} data={data} />
          <ListMonsters filteredData={filteredData} />
       </div>
