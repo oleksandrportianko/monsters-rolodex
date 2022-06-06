@@ -2,9 +2,9 @@ import React from 'react'
 import './Search.css'
 
 const Search = ({ setFilteredData, data }) => {
-
-   const searchFilter = (text) => {
-      const textLower = text.toLowerCase()
+   
+   const searchFilter = (event) => {
+      const textLower = event.target.value.toLowerCase()
       
       const filtered = data.filter(item => {
          return item.name.toLowerCase().includes(textLower)
@@ -14,7 +14,7 @@ const Search = ({ setFilteredData, data }) => {
    }
 
    return (
-      <input className='search-input' type="text" placeholder='Search monsters' onChange={(e) => searchFilter(e.target.value)} />
+      <input className='search-input' type="text" placeholder='Search monsters' onChange={searchFilter} />
    )
 }
 
