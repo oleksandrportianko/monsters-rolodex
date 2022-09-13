@@ -4,7 +4,7 @@ import './Search.css'
 
 type SearchBoxProps = {
    placeholder?: string;
-   searchFilter: (event: ChangeEvent<HTMLInputElement>) => void  
+   searchFilter: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Search = ({ searchFilter, placeholder }: SearchBoxProps) => {
