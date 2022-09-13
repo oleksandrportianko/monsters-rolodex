@@ -1,20 +1,15 @@
-import React from 'react'
+import { ChangeEventHandler } from 'react'
+
 import './Search.css'
 
-const Search = ({ setFilteredData, data }) => {
-   
-   const searchFilter = (event) => {
-      const textLower = event.target.value.toLowerCase()
-      
-      const filtered = data.filter(item => {
-         return item.name.toLowerCase().includes(textLower)
-      })
+type SearchBoxProps = {
+   placeholder?: string;
+   searchFilter: (ChangeEventHandler<HTMLInputElement>) 
+}
 
-      setFilteredData(filtered)
-   }
-
+const Search = ({ searchFilter, placeholder }: SearchBoxProps) => {
    return (
-      <input className='search-input' type="text" placeholder='Search monsters' onChange={searchFilter} />
+      <input className='search-input' type="text" placeholder={placeholder} onChange={searchFilter} />
    )
 }
 

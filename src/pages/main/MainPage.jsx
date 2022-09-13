@@ -8,6 +8,16 @@ const Main = () => {
    const [data, setData] = useState([])
    const [filteredData, setFilteredData] = useState([])
 
+   const searchFilter = (event) => {
+      const textLower = event.target.value.toLowerCase()
+      
+      const filtered = data.filter(item => {
+         return item.name.toLowerCase().includes(textLower)
+      })
+
+      setFilteredData(filtered)
+   }
+
    useEffect(() => {
       axios.get('https://jsonplaceholder.typicode.com/users')
          .then((response) => {
@@ -19,7 +29,7 @@ const Main = () => {
    return (
       <div className='main-page-container'>
          <h1 className='main-page-title'>Monsters rolodex</h1>
-         <Search setFilteredData={setFilteredData} data={data} />
+         <Search searchFilter={searchFilter} data={data} placeholder='Search monsters' />
          <ListMonsters filteredData={filteredData} />
       </div>
    )
